@@ -30,11 +30,16 @@ https://github.com/anandmohanam/hospital_website.git
 2. Install dependencies:
 
    pip install django
+   
+   
 
 
 3. Apply migrations:
 
    py manage.py migrate
+
+   py manage.py createsuperuser
+  
   
 
 4. Run the development server:
