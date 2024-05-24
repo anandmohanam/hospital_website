@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<body>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        {% for img in img %}
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %} aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
+        {% endfor %}
+    </div>
+
+    <div class="carousel-inner">
+        {% for img in img %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="10000">
+                <img src="{{ img.img.url }}" height="400px" width="100%" class="d-block w-100" alt="...">
+            </div>
+        {% endfor %}
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- banner -->
+<div id="intro">
+    <div id="home" class="banner-w3pvt d-flex">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 bnr-txt-w3pvt">
+                    <div class="bnr-w3pvt-txt mt-sm-5">
+                        <h6>Welcome to Angelcare Hospital Webpage</h6>
+                        <h2><span>Angelcare Hospital</span></h2>
+                        <h4>Multispeciality Hospital</h4>
+                        <p class="mt-4"><b>In healthcare sector, service excellence is<br> the facility of the hospital and healthcare service provider to consistently provide quality care.</b></p>
+                        <a href="{% url 'bookings' %}" class="scroll bnr-btn mr-2">Book An Appointment</a>
+                        <a href="{% url 'contact' %}" class="scroll bnr-btn1">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
+{% endblock %}
