@@ -6,7 +6,7 @@ This is a Django-based web application designed to facilitate appointment bookin
 
 1. **User Registration and Authentication**: Users can register and log in to the system securely.
 
-2. **Doctor Details**: Detailed information about doctors including their specialties, experience, and availability is provided.
+2. **Doctor Details**: Detailed information about doctors including their specialties is provided.
 
 3. **Appointment Booking**: Users can book appointments with their preferred doctors based on availability.
 
@@ -26,6 +26,7 @@ This is a Django-based web application designed to facilitate appointment bookin
 1. Clone the repository:
 https://github.com/anandmohanam/hospital_website.git
 
+
 2. Install dependencies:
 
    pip install django
@@ -33,12 +34,12 @@ https://github.com/anandmohanam/hospital_website.git
 
 3. Apply migrations:
 
-  py manage.py migrate
+   py manage.py migrate
   
 
 4. Run the development server:
 
- http://127.0.0.1:8000/
+   py manage.py runserver
 
 
 
@@ -48,7 +49,17 @@ https://github.com/anandmohanam/hospital_website.git
 
 ## Screenshots
 
-(Include screenshots here if available)
+1.[home](./screenshort/home.png)
+
+2.[about](./screenshort/about.png)
+
+3.[booking](./screenshort/booking.png)
+
+4.[department](./screenshort/depat.png)
+
+5.[doctor](./screenshort/doctors.png)
+
+6.[contact](./screenshort/contact.png)
 
 ## Contributors
 
